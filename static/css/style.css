@@ -1,0 +1,159 @@
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --dark-color: #5a5c69;
+    --light-color: #f8f9fc;
+}
+
+body {
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.navbar {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.card {
+    border: none;
+    border-radius: 0.35rem;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    padding: 1rem 1.35rem;
+    background-color: var(--light-color);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.form-control, .form-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d3e2;
+    border-radius: 0.35rem;
+    transition: all 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #bac8f3;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2653d4;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#priceResult {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* Navigation */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* Table Styles */
+#historyTable {
+    font-size: 0.9rem;
+}
+
+#historyTable th {
+    font-weight: 600;
+    background-color: var(--light-color);
+}
+
+#historyTable tr:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.price-update {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    #priceResult {
+        font-size: 2rem;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        margin-top: 0.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    #priceResult {
+        font-size: 1.75rem;
+    }
+}
