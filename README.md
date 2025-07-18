@@ -2,7 +2,6 @@
 
 A machine learning web application that predicts house prices based on property features.
 
-![Screenshot](screenshot.png) <!-- Add a screenshot later -->
 
 ## Features
 
